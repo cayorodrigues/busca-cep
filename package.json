@@ -1,0 +1,24 @@
+{
+  "name": "busca-cep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cayorodrigues/busca-cep.git"
+  },
+  "author": "Cayo Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cayorodrigues/busca-cep/issues"
+  },
+  "homepage": "https://github.com/cayorodrigues/busca-cep#readme",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
+  }
+}
