@@ -12,6 +12,3 @@ Uma aplicação Node e AngularJS que busca o CEP de uma rua de Goiânia.
 
 <<<<<<< HEAD
 * Com o servidor em execução basta acessar  [localhost](http:// localhost:8080) para visualizar a aplicação.
-=======
-* Com o servidor em execução basta acessar  [localhost](htpp:// localhost:8080) para visualizar a aplicação.
->>>>>>> 6cfe0e62749d2d48658f97fa9ab7b15ef11169d8
