@@ -1,0 +1,49 @@
+<h1>Home</h1>
+
+<form>
+  <label>Buscar CEP</label>
+  <input type="text" ng-model="logradouro" name="logradouro" placeholder="Logradouro">
+
+  <input type="submit" id="submit" ng-click="submitBusca()" value="Buscar">
+
+</form>
+
+<br>
+
+<form>
+  <label>Indicar Imóvel</label><br>
+
+  <label>CEP</label>
+  <input type="text" ng-model="cepSelecionado.cep" name="cep"><br>
+
+  <label>Logradouro</label>
+  <input type="text" ng-model="cepSelecionado.logradouro" name="logradouro"><br>
+
+  <label>Complemento</label>
+  <input type="text" ng-model="cepSelecionado.complemento" name="complemento"><br>
+
+  <label>Bairro</label>
+  <input type="text" ng-model="cepSelecionado.bairro" name="bairro"><br>
+
+  <label>Localidade</label>
+  <input type="text" ng-model="cepSelecionado.localidade" name="localidade"><br>
+
+  <label>UF</label>
+  <input type="text" ng-model="cepSelecionado.uf" name="uf"><br>
+
+  <input type="submit" ng-click="submitImovel()" value="Indicar">
+</form>
+
+<br>
+
+<ul ng-if="ceps.length">
+  <li ng-repeat="cep in ceps">
+    <span>CEP: {{cep.cep}}</span>
+    <p>Logradouro: {{cep.logradouro}}</p>
+    <p>Complemento: {{cep.complemento}}</p>
+    <p>Bairro: {{cep.bairro}}</p>
+    <p>Localidade: {{cep.localidade}}</p>
+    <p>UF: {{cep.uf}}</p>
+    <input type="submit" value="Selecionar" ng-click="selecionar(cep)">
+  </li>
+</ul>

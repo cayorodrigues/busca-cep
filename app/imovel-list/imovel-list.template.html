@@ -1,0 +1,16 @@
+<div>
+  <h1>Imovéis indicados</h1>
+
+  <br>
+
+  <ul>
+      <li ng-repeat="imovel in $ctrl.imoveis">
+          <span>CEP: {{imovel.cep}}</span>
+          <p>Logradouro: {{imovel.logradouro}}</p>
+          <p>Complemento: {{imovel.complemento}}</p>
+          <p>Bairro: {{imovel.bairro}}</p>
+          <p>Localidade: {{imovel.localidade}}</p>
+          <p>UF: {{imovel.uf}}</p>
+      </li>
+  </ul>
+</div>
