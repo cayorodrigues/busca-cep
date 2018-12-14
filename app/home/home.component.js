@@ -4,7 +4,7 @@ angular.
     templateUrl: 'home/home.template.html',
     controller: function HomeController($scope, $http, $location, Imovel) {
       this.logradouro = '';
-      $scope.cepSelecionado;
+      $scope.cepSelecionado = {};
 
       $scope.submitBusca = function() {
         if(this.logradouro && this.logradouro.length >= 3) {

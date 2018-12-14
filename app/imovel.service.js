@@ -1,22 +1,26 @@
 angular.
   module('buscaCepApp').
-  service('Imovel', function() {
-    this.imoveis = [
-      {
-        cep: '74491-853',
-        logradouro: 'Rua Goiás',
-        complemento: '',
-        bairro: 'Residencial Mundo Novo 1',
-        localidade: 'Goiânia',
-        uf: 'GO'
-      }
-    ];
+  service('Imovel', function($http) {
+    this.imoveis = [];
 
     this.getImoveis = function() {
-      return this.imoveis;
+      $http.get('http://localhost:8080/api/imoveis').
+        then((response) => {
+          this.imoveis = response.data;
+        }, (err) => {
+          console.log(err);
+        });
+        return this.imoveis;
     }
 
     this.addImovel = function(imovel) {
       this.imoveis.push(imovel);
+
+      /*$http.post('http://localhost:8080/api/imoveis', imovel).
+        then((response) => {
+          console.log(response);
+        }, (err) => {
+          console.log(err);
+        });*/
     }
   });
